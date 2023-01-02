@@ -1,0 +1,19 @@
+/* Basic */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Reset */
+body, h1, h2, h3, h4, h5, h6, p, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
