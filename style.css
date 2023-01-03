@@ -120,3 +120,90 @@ a:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px currentColor;
 }
+
+/* Hero */
+.hero {
+  height: 400px;
+  background-image: url(img/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+}
+
+.hero .headline {
+  flex: auto;
+  align-self: flex-end;
+  padding: 33px 0;
+  background-color: rgba(255,255,255,0.76);
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.hero img {
+  max-width: 100px;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.hero p {
+  font-size: 15px;
+  color: #2E5180;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 900px){
+  .hero {
+    height: 700px;
+  }
+
+  .hero .headline {
+    padding: 47px 0 44px;
+  }
+
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 22px;
+  }
+}
+
+/* Message */
+.message {
+  padding: 67px 0;
+  background-color: #2E5180;
+  color: #ffffff;
+}
+
+.message h2 {
+  margin-bottom: 38px;
+  font-size: 26px;
+  line-height: 1.62;
+  text-align: center;
+}
+
+.message p {
+  max-width: 640px;
+  margin: auto;
+  font-size: 15px;
+  line-height: 1.73;
+}
+
+@media (min-width: 900px) {
+  .message {
+    padding: 81px 0;
+  }
+
+  .message h2 {
+    font-size: 36px;
+    line-height: 1.33;
+  }
+}
+
+@media (min-width: 374px){
+  .message h2 {
+    font-size: 20px;
+  }
+}
