@@ -117,19 +117,32 @@ a:hover {
   transition: 0.3s ease-in-out;
 }
 
+.nav-button::before {
+  transform: translateY(-5px);
+  box-shadow: 0 6px currentColor;
+}
+
+/* Navigation close button */
+.open .nav-button {
+  z-index: 1000;
+  color: #ffffff;
+}
+
 .open .nav-button::before {
   transform: translateY(1px) rotate(45deg);
   box-shadow: none;
 }
 
 .open .nav-button::after {
-  transform: translateY(-1px rotate(-45deg));
+  transform: translateY(-1px) rotate(-45deg);
 }
 
-html.open, .open body {
-  height: 100%;
-  overflow: hidden;
-}
+/* Navigation menu on mobile */
+@media (max-width: 899px) {
+  html.open, .open body {
+    height: 100%;
+    overflow: hidden;
+  }
 
 .open nav {
   left: 0;
@@ -138,11 +151,13 @@ html.open, .open body {
   display: none;
 }
 .header {
-  position: relative;
+    position: relative;
 }
+
 html, body {
     overflow-x: hidden;
 }
+
 .nav {
   position: absolute;
   top: 0;
@@ -167,14 +182,34 @@ html, body {
   margin-bottom: 40px;
 }
 
-.nav .btn {
-  color: inherit;
+  .nav .btn {
+    color: inherit;
+  }
 }
 
-.open .nav-button {
-  z-index: 1000;
-  color: #ffffff;
+/* Navigation button on desktop */
+@media (min-width: 900px){
+  .nav-button {
+    display: none;
+  }
+
+  .nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: #333333;
+  }
+
+  .nav li:not(:last-child){
+    margin-right: 23px;
+  }
+
+  .nav .btn {
+    width: 148px;
+    border-color: #CDD6DD;
+  }
 }
+
 
 /* Hero */
 .hero {
@@ -544,4 +579,21 @@ html, body {
   .footer .add {
     margin: 22px 0 0 77px;
   }
+}
+
+/* Fade in effect */
+body {
+  animation: fade 2s;
+}
+
+@keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
 }
